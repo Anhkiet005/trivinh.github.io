@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Manup Template">
+    <meta name="keywords" content="Manup, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ấn phẩm truyền thông</title>
+
+<style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fcfb;
+    }
+
+    .gallery {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #00695c;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-item {
+      flex: 0 0 calc(50% - 15px);
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item p {
+      background: #f0f5f3;
+      padding: 10px 15px;
+      margin: 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Ảnh dọc */
+    .gallery-item.portrait img {
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Ảnh ngang */
+    .gallery-item.landscape img {
+      height: auto;
+    }
+
+    /* Lightbox overlay */
+    #lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+#lightbox-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+    #lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .blur {
+      filter: blur(4px);
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+   <header class="header-section">
+        <div class="container">
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li ><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./schedule.html">Kịch bản</a></li>
+                        <li><a href="./ttsk.html">Thông tin sự kiện</a></li>
+                        <li><a href="./ppdg.html">Phương pháp đánh giá</a></li>
+                        <li class="active"><a href="#">Xem thêm</a>
+                            <ul class="dropdown">
+                                <li><a href="/khtt.html">Kế hoạch truyền thông</a></li>
+                                <li><a href="/dtkp.html">Dự trù kinh phí</a></li>
+                                <li><a href="/qtrr.html">Quản trị rủi ro</a></li>
+                                <li><a href="/aptt.html">Ấn phẩm truyền thông</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>ẤN PHẨM TRUYỀN THÔNG CỦA CHÚNG TÔI</h2>
+                        <div class="bt-option">
+                            <a href="#">Home</a>
+                            <span>Ấn phẩm truyền thông của chúng tôi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+<section class="gallery">
+
+  <!-- Dòng 1 -->
+  <div class="image-row">
+    <div class="gallery-item landscape">
+      <img src="/img/my-pic/pic-4.png" alt="Backdrop chương trình" class="zoomable" data-src="/img/my-pic/pic-4.png">
+      <p>Backdrop Chương Trình – Hồn Thiên Nương Sắc</p>
+    </div>
+    <div class="gallery-item landscape">
+      <img src="/img/my-pic/pic-5.png" alt="Nhà tài trợ" class="zoomable" data-src="/img/my-pic/pic-5.png">
+      <p>Nhà Tài Trợ Chương Trình</p>
+    </div>
+  </div>
+
+  <!-- Dòng 2 -->
+  <div class="image-row">
+    <div class="gallery-item portrait">
+      <img src="/img/my-pic/pic-6.png" alt="Thư mời" class="zoomable" data-src="/img/my-pic/pic-6.png">
+      <p>Thư Mời Tham Gia Sự Kiện</p>
+    </div>
+    <div class="gallery-item portrait">
+      <img src="/img/my-pic/pic-7.png" alt="Thư cảm ơn" class="zoomable" data-src="/img/my-pic/pic-7.png">
+      <p>Thư Cảm Ơn Sau Chương Trình</p>
+    </div>
+  </div>
+
+  <!-- Dòng 3 -->
+  <div class="image-row">
+    <div class="gallery-item landscape">
+      <img src="/img/my-pic/pic-8.png" alt="Sơ đồ hội trường" class="zoomable" data-src="/img/my-pic/pic-8.png">
+      <p>Sơ đồ Hội Trường Trần Hưng Đạo</p>
+    </div>
+    <div class="gallery-item landscape">
+      <img src="/img/my-pic/pic-9.png" alt="Sơ đồ khuôn viên" class="zoomable" data-src="/img/my-pic/pic-9.png">
+      <p>Sơ đồ Sảnh Trống Đồng & Khuôn Viên Trường</p>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox-overlay">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Zoomed Image">
+</div>
+
+
+
+
+    <!-- Footer Section Begin -->
+      <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-text">
+                        <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by Group 05</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="ft-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+  const zoomImages = document.querySelectorAll('.zoomable');
+  const lightbox = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+  const allRows = document.querySelectorAll('.image-row');
+
+  zoomImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.getAttribute('data-src');
+      allRows.forEach(row => row.classList.add('blur'));
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+    allRows.forEach(row => row.classList.remove('blur'));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === "Escape") {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+      allRows.forEach(row => row.classList.remove('blur'));
+    }
+  });
+</script>
+
+</body>
+
+</html>
